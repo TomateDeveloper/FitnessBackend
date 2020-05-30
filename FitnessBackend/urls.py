@@ -19,8 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^user/', include(('users.urls', 'users'), namespace='users')),
-    url(r'^categories/', include(('categories.urls', 'categories'), namespace='categories')),
-    url(r'^groups/', include(('categories.urls', 'groups'), namespace='groups')),
-    url(r'^videos/', include(('video.urls', 'video'), namespace='video')),
+    url(r'^api/user/', include(('users.urls', 'users'), namespace='users')),
+    url(r'^api/categories/', include(('categories.urls', 'categories'), namespace='categories')),
+    url(r'^api/groups/', include(('groups.urls', 'groups'), namespace='groups')),
+    url(r'^api/videos/', include(('video.urls', 'video'), namespace='video')),
 ]

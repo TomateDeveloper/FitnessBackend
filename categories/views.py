@@ -16,7 +16,7 @@ from categories.serializers import CategorySerializer
 @permission_classes([IsAuthenticated])
 def get_category(request, category_id):
     category = Category.objects.get(id=category_id)
-    serializer = CategorySerializer(category, many=True)
+    serializer = CategorySerializer(category, many=False)
     return JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
 
 

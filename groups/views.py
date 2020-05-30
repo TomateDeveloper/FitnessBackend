@@ -17,7 +17,7 @@ from groups.serializers import GroupSerializer
 @permission_classes([IsAuthenticated])
 def get_group(request, group_id):
     group = Group.objects.get(id=group_id)
-    serializer = GroupSerializer(group, many=True)
+    serializer = GroupSerializer(group, many=False)
     return JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
 
 
