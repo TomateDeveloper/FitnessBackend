@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^user/', include(('users.urls', 'users'), namespace='users')),
     url(r'^categories/', include(('categories.urls', 'categories'), namespace='categories')),
     url(r'^groups/', include(('categories.urls', 'groups'), namespace='groups')),
-    url(r'^videos/', include(('videos.urls', 'videos'), namespace='videos')),
+    url(r'^videos/', include(('video.urls', 'video'), namespace='video')),
 ]
